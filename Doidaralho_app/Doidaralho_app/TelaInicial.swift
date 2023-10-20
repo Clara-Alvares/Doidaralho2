@@ -44,8 +44,6 @@ struct TelaInicial: View {
                     
                     Spacer()
                     
-                    //Botoes
-//                    Navigati
                   
                     Button {
                         path.append(.TelaInsiraJogadores)

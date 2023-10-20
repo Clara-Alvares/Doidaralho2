@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Baralho-botão.png",
+      "filename" : "Baralho-botão 3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Baralho-botão.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Baralho-botão 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
