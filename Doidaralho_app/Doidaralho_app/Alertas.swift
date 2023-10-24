@@ -47,11 +47,12 @@ struct ComoJogar: View {
                 Spacer()
                 
                 Button {
-                    path = []
+//                    path = []
+                    print("bruno gay")
                 } label: {
                     ZStack {
-                        Capsule().frame(width: 180, height: 50).foregroundColor(Color("rosa3"))
-                        Text("Tela inicial").foregroundColor(Color("rosaTexto"))
+//                        Capsule().frame(width: 180, height: 50).foregroundColor(Color("rosa3"))
+//                        Text("Tela inicial").foregroundColor(Color("rosaTexto"))
                     }
                 }
 

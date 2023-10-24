@@ -64,12 +64,12 @@ struct TelaInsiraJogadores: View {
             }.padding(.top, 45)
 
             
-            NavigationLink(destination: Jogo(njogadores: $njogadores, jogadores: $jogadores, path: $path), isActive: $irjogo) {
-                EmptyView()
-            }
+            
             
             Button {
-                irjogo.toggle()
+                print(path)
+                path.append(.Jogo)
+                //irjogo.toggle()
             } label: {
                 ZStack {
                     Capsule().frame(width: 220, height: 50).foregroundColor(Color("rosaPink"))

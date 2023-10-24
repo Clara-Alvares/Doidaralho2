@@ -18,6 +18,7 @@ struct Doidaralho_appApp: App {
     
     @State var jogadores:[String] = []
     @State var njogadores:Int = 0
+    @State var path:[ViewsTela] = []
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     init() {

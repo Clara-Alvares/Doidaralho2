@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct Carta: Hashable {
-    let id:Int
-    let imagem:String
-}
+
 
 
 struct Teste1: View{

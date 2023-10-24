@@ -239,7 +239,9 @@ struct Jogo: View {
                         }
                         Spacer()
                         Button {
+                            print(path.count)
                             path = []
+                            print(path.count)
                         } label: {
                             ZStack {
                                 Capsule().frame(width: 180, height: 50).foregroundColor(Color("rosa3"))
