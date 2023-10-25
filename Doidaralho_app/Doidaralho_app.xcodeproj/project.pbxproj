@@ -13,6 +13,11 @@
 		BA5459262A0EB61C00CE9B9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5459252A0EB61C00CE9B9F /* Assets.xcassets */; };
 		BA5459292A0EB61C00CE9B9F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA5459282A0EB61C00CE9B9F /* Preview Assets.xcassets */; };
 		BA5459342A0EC56C00CE9B9F /* TelaInsiraJogadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5459332A0EC56C00CE9B9F /* TelaInsiraJogadores.swift */; };
+		BA7E69E12AE982ED000D05BF /* InsiraJogadoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E69E02AE982ED000D05BF /* InsiraJogadoresView.swift */; };
+		BA7E69E62AE98387000D05BF /* NomeJogadoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E69E52AE98387000D05BF /* NomeJogadoresView.swift */; };
+		BA7E69EB2AE98693000D05BF /* JogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E69EA2AE98693000D05BF /* JogoView.swift */; };
+		BA7E69EF2AE986B4000D05BF /* JogoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E69EE2AE986B4000D05BF /* JogoVM.swift */; };
+		BA7E69F22AE98896000D05BF /* BaralhosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7E69F12AE98896000D05BF /* BaralhosView.swift */; };
 		BA8617532A196D54001D79C6 /* cartasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8617522A196D54001D79C6 /* cartasView.swift */; };
 		BA9AA6F72A1ADED100469A1A /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA9AA6F52A1ADED100469A1A /* Montserrat-VariableFont_wght.ttf */; };
 		BA9AA6FA2A1AFF2800469A1A /* Baralhos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9AA6F92A1AFF2800469A1A /* Baralhos.swift */; };
@@ -35,6 +40,11 @@
 		BA5459252A0EB61C00CE9B9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA5459282A0EB61C00CE9B9F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BA5459332A0EC56C00CE9B9F /* TelaInsiraJogadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInsiraJogadores.swift; sourceTree = "<group>"; };
+		BA7E69E02AE982ED000D05BF /* InsiraJogadoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiraJogadoresView.swift; sourceTree = "<group>"; };
+		BA7E69E52AE98387000D05BF /* NomeJogadoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomeJogadoresView.swift; sourceTree = "<group>"; };
+		BA7E69EA2AE98693000D05BF /* JogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoView.swift; sourceTree = "<group>"; };
+		BA7E69EE2AE986B4000D05BF /* JogoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogoVM.swift; sourceTree = "<group>"; };
+		BA7E69F12AE98896000D05BF /* BaralhosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaralhosView.swift; sourceTree = "<group>"; };
 		BA8617522A196D54001D79C6 /* cartasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartasView.swift; sourceTree = "<group>"; };
 		BA9AA6F52A1ADED100469A1A /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BA9AA6F92A1AFF2800469A1A /* Baralhos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baralhos.swift; sourceTree = "<group>"; };
@@ -81,7 +91,6 @@
 			children = (
 				BAB80A2A2AE8325A00C61E04 /* Model */,
 				BAB80A292AE8325400C61E04 /* View */,
-				BAB80A282AE8323500C61E04 /* ViewModel */,
 				BACD6CCE2A129A7E00C45E75 /* Fontes */,
 				BA5459212A0EB61B00CE9B9F /* Doidaralho_appApp.swift */,
 				BA2072D52A818FB300F33046 /* teste.swift */,
@@ -105,19 +114,65 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BAB80A282AE8323500C61E04 /* ViewModel */ = {
+		BA7E69DD2AE98295000D05BF /* TelaInicial */ = {
 			isa = PBXGroup;
 			children = (
+				BAB80A312AE833BB00C61E04 /* TelaInicial.swift */,
 				BAB80A332AE833C900C61E04 /* TelaInicialVM.swift */,
 			);
-			path = ViewModel;
+			path = TelaInicial;
+			sourceTree = "<group>";
+		};
+		BA7E69DE2AE982AB000D05BF /* ModalComoJogar */ = {
+			isa = PBXGroup;
+			children = (
+				BAB80A2F2AE8332000C61E04 /* ModalComoJogar.swift */,
+			);
+			path = ModalComoJogar;
+			sourceTree = "<group>";
+		};
+		BA7E69DF2AE982DB000D05BF /* TelaInsiraJogadores */ = {
+			isa = PBXGroup;
+			children = (
+				BA7E69E02AE982ED000D05BF /* InsiraJogadoresView.swift */,
+			);
+			path = TelaInsiraJogadores;
+			sourceTree = "<group>";
+		};
+		BA7E69E42AE98379000D05BF /* TelaNomeJogadores */ = {
+			isa = PBXGroup;
+			children = (
+				BA7E69E52AE98387000D05BF /* NomeJogadoresView.swift */,
+			);
+			path = TelaNomeJogadores;
+			sourceTree = "<group>";
+		};
+		BA7E69E92AE98672000D05BF /* Jogo */ = {
+			isa = PBXGroup;
+			children = (
+				BA7E69EA2AE98693000D05BF /* JogoView.swift */,
+				BA7E69EE2AE986B4000D05BF /* JogoVM.swift */,
+			);
+			path = Jogo;
+			sourceTree = "<group>";
+		};
+		BA7E69F02AE9888A000D05BF /* Baralhos */ = {
+			isa = PBXGroup;
+			children = (
+				BA7E69F12AE98896000D05BF /* BaralhosView.swift */,
+			);
+			path = Baralhos;
 			sourceTree = "<group>";
 		};
 		BAB80A292AE8325400C61E04 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BAB80A2F2AE8332000C61E04 /* ModalComoJogar.swift */,
-				BAB80A312AE833BB00C61E04 /* TelaInicial.swift */,
+				BA7E69DD2AE98295000D05BF /* TelaInicial */,
+				BA7E69DE2AE982AB000D05BF /* ModalComoJogar */,
+				BA7E69DF2AE982DB000D05BF /* TelaInsiraJogadores */,
+				BA7E69E42AE98379000D05BF /* TelaNomeJogadores */,
+				BA7E69E92AE98672000D05BF /* Jogo */,
+				BA7E69F02AE9888A000D05BF /* Baralhos */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,10 +270,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF53A2F2A1BECCB00527E41 /* Jogo.swift in Sources */,
+				BA7E69E12AE982ED000D05BF /* InsiraJogadoresView.swift in Sources */,
+				BA7E69F22AE98896000D05BF /* BaralhosView.swift in Sources */,
 				BA9AA6FA2A1AFF2800469A1A /* Baralhos.swift in Sources */,
+				BA7E69EB2AE98693000D05BF /* JogoView.swift in Sources */,
 				BA5459222A0EB61B00CE9B9F /* Doidaralho_appApp.swift in Sources */,
 				BAB80A322AE833BB00C61E04 /* TelaInicial.swift in Sources */,
 				BAB80A342AE833C900C61E04 /* TelaInicialVM.swift in Sources */,
+				BA7E69E62AE98387000D05BF /* NomeJogadoresView.swift in Sources */,
 				BA5459342A0EC56C00CE9B9F /* TelaInsiraJogadores.swift in Sources */,
 				BA2072D62A818FB300F33046 /* teste.swift in Sources */,
 				BAB80A2E2AE8329E00C61E04 /* Cartas.swift in Sources */,
@@ -226,6 +285,7 @@
 				BAB80A2C2AE8327C00C61E04 /* Telas.swift in Sources */,
 				BAE0C4522A13FA7400D7C27F /* NomeJogadores.swift in Sources */,
 				BA9AA6FC2A1B0F8000469A1A /* Alertas.swift in Sources */,
+				BA7E69EF2AE986B4000D05BF /* JogoVM.swift in Sources */,
 				BA8617532A196D54001D79C6 /* cartasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

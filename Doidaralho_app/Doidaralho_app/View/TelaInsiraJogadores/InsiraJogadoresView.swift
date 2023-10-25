@@ -1,9 +1,9 @@
-//
+
 //  InsiraJogadoresView.swift
 //  Doidaralho_app
 //
 //  Created by Clara Alvares Barbosa on 25/10/23.
-//
+
 
 import Foundation
 import SwiftUI
@@ -65,7 +65,11 @@ struct TelaInsiraJogadores: View {
             }.padding(.top, 45)
             
             Button {
+                print(njogadores)
                 path.append(.Jogo)
+                //jogoVM.gerarNomesAleatorios(njogadores: njogadores)
+                
+                
             } label: {
                 ZStack {
                     Capsule().frame(width: 220, height: 50).foregroundColor(Color("rosaPink"))

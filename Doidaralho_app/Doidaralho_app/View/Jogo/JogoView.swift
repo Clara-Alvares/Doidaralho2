@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct Jogo: View {
-    
+        
     @Binding var njogadores:Int // numero de jogadores
     @Binding var jogadores:[String] // nomes especificos
     @State var aleatorio:[String] = [] // aleatorio
@@ -151,8 +151,10 @@ struct Jogo: View {
                 }.padding(.leading, 40)
             }.navigationBarBackButtonHidden(true)
                 .onAppear() {
+                    print(njogadores)
                     gerarNomesAleatorios()
                     nomes()
+                    print(aleatorio)
                     cartas.shuffle()
                 }
             
