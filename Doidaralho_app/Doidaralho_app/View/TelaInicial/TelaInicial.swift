@@ -93,7 +93,6 @@ struct TelaInicial: View {
             }
             .accentColor(Color("AccentColor"))
             .navigationDestination(for: ViewsTela.self) { tela in
-                
                 teste.viewForTela(tela, path: $path, jogadores: $jogadores, njogadores: $njogadores)
             }
             
