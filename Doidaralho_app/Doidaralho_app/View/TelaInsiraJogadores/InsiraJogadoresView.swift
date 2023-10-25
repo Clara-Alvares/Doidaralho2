@@ -10,12 +10,13 @@ import SwiftUI
 
 struct TelaInsiraJogadores: View {
 
-    @State var njogadores:Int = 2
+    @StateObject private var jogoVM = JogoViewModel()
+    //@State var njogadores:Int = 2
     @State  var irjogo:Bool = false
     @Binding var jogadores:[String]
     @Binding var path:[ViewsTela]
     
-    
+ 
     var body: some View {
         
                     ZStack{
@@ -36,7 +37,7 @@ struct TelaInsiraJogadores: View {
                 .foregroundColor(Color("rosaTexto"))
                 .padding(.top, 50)
             
-            Picker("Number", selection: $njogadores) {
+            Picker("Number", selection: $jogoVM.njogadores) {
                 ForEach(2...20, id: \.self) { number in
                     Text("\(number)")
                         .fontWeight(.heavy)
@@ -54,7 +55,7 @@ struct TelaInsiraJogadores: View {
             
             //Botão para nomear os jogadores
             NavigationLink{
-                NomeJogadores(njogadores: $njogadores, caixatext: "", path: $path)
+                NomeJogadores(caixatext: "", path: $path)
             } label: {
                 ZStack {
                     Capsule().frame(width: 220, height: 50).foregroundColor(Color("rosaPink"))
@@ -65,7 +66,10 @@ struct TelaInsiraJogadores: View {
             }.padding(.top, 45)
             
             Button {
-                print(njogadores)
+                print("NUMERO DE JOGADORES VM: \(jogoVM.njogadores)")
+                //print("NUMERO DE JOGADORES INSIRA JOGADORES: \(njogadores)")
+                
+                //jogoVM.njogadores = njogadores
                 path.append(.Jogo)
                 //jogoVM.gerarNomesAleatorios(njogadores: njogadores)
                 
@@ -90,8 +94,8 @@ struct TelaInsiraJogadores: View {
             
 
 
-struct TelaInsiraJogadores_Previews: PreviewProvider {
-    static var previews: some View {
-        TelaInsiraJogadores(jogadores: .constant(["Default"]), path: .constant([]))
-    }
-}
+//struct TelaInsiraJogadores_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TelaInsiraJogadores(jogadores: .constant(["Default"]), path: .constant([]))
+//    }
+//}

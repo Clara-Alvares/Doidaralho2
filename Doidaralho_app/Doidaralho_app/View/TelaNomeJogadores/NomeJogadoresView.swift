@@ -10,7 +10,8 @@ import SwiftUI
 
 struct NomeJogadores: View {
     
-    @Binding var njogadores:Int
+    @StateObject private var jogoVM = JogoViewModel()
+    //@Binding var njogadores:Int
     @State var jogadores:[String] = []
     @State var caixatext:String = ""
     @State private var scrollPosition: CGFloat = 0
@@ -53,7 +54,7 @@ struct NomeJogadores: View {
                         }
                     }
                     .buttonStyle(.borderedProminent).tint(Color("rosaPink"))
-                    .disabled(njogadores==jogadores.count)
+                    .disabled(jogoVM.njogadores==jogadores.count)
                 }.padding(.top, 20)
                 
                 ScrollViewReader { scrollView in
@@ -89,19 +90,19 @@ struct NomeJogadores: View {
                 }
                 Spacer()
                 
-                Text("\(jogadores.count)/\(njogadores)").foregroundColor(Color("rosaTexto"))
+                Text("\(jogadores.count)/\(jogoVM.njogadores)").foregroundColor(Color("rosaTexto"))
                 
-                if njogadores==jogadores.count{
+                if jogoVM.njogadores==jogadores.count{
                     Text("Vamos começar? Seja responsável... ou não 🤪")
                         .font(.custom("Montserrat", size: 15))
                         .foregroundColor(Color("rosaTexto"))
                 }
                 
                 NavigationLink{
-                    Jogo(njogadores: $njogadores, jogadores: $jogadores, path: $path)
+                    Jogo(jogadores: $jogadores, path: $path)
                 } label: {
                     
-                    if njogadores==jogadores.count {
+                    if jogoVM.njogadores==jogadores.count {
                         ZStack{
                             Capsule().frame(width: 150, height: 50).foregroundColor(Color("rosaPink"))
                             Text("Jogar").foregroundColor(Color("rosaTexto"))
@@ -112,7 +113,7 @@ struct NomeJogadores: View {
                             Text("Jogar").foregroundColor(Color("rosaTexto"))
                         }
                     }
-                }.disabled(njogadores>jogadores.count)
+                }.disabled(jogoVM.njogadores>jogadores.count)
                     .accentColor(Color("rosaPink"))
             }
         }
@@ -129,6 +130,6 @@ struct NomeJogadores: View {
 struct NomeJogadores_Previews: PreviewProvider {
     static var previews: some View {
         //Teste()
-        NomeJogadores(njogadores: .constant(6), caixatext: "", path: .constant([]))
+        NomeJogadores(caixatext: "", path: .constant([]))
     }
 }

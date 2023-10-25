@@ -11,7 +11,9 @@ import SwiftUI
 
 struct Jogo: View {
         
-    @Binding var njogadores:Int // numero de jogadores
+    @StateObject private var jogoVM = JogoViewModel()
+    
+    //@Binding var njogadores:Int // numero de jogadores
     @Binding var jogadores:[String] // nomes especificos
     @State var aleatorio:[String] = [] // aleatorio
     @State var nomesJogadores:[String] = [ ] // ARRAY OFICIAL DO JOGO, ALEATORIO ou JOGADORES
@@ -44,7 +46,7 @@ struct Jogo: View {
     }
     
     func gerarNomesAleatorios() {
-        for numero in 0..<njogadores{
+        for numero in 0..<jogoVM.njogadores{
             aleatorio.append("Jogador \(numero + 1)")
         }
     }
@@ -151,7 +153,7 @@ struct Jogo: View {
                 }.padding(.leading, 40)
             }.navigationBarBackButtonHidden(true)
                 .onAppear() {
-                    print(njogadores)
+                    //print(njogadores)
                     gerarNomesAleatorios()
                     nomes()
                     print(aleatorio)
@@ -182,7 +184,7 @@ struct Jogo: View {
                             HStack{
                                 
                                 NavigationLink{
-                                    Jogo(njogadores: $njogadores, jogadores: $jogadores, path: $path)
+                                    Jogo(jogadores: $jogadores, path: $path)
                                 } label: {
                                     ZStack{
                                         Capsule().frame(width: UIScreen.main.bounds.width * 0.43, height: 50).foregroundColor(Color("rosa2"))
@@ -257,8 +259,8 @@ struct Jogo: View {
 
 
 
-struct Jogo_Previews: PreviewProvider {
-    static var previews: some View {
-        Jogo(njogadores: .constant(3), jogadores: .constant(["Default"]), path: .constant([.Jogo]))
-    }
-}
+//struct Jogo_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Jogo(njogadores: <#Binding<Int>#>, jogadores: .constant(["Default"]), path: .constant([.Jogo]))
+//    }
+//}

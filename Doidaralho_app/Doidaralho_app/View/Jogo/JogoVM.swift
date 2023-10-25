@@ -59,3 +59,7 @@ struct CartasView: View {
 }
 
 
+class JogoViewModel: ObservableObject {
+    @Published var njogadores:Int = 2
+    
+}

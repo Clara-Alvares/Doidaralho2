@@ -22,9 +22,9 @@ class TelaInicialVM: ObservableObject {
             return AnyView(TelaInsiraJogadores(jogadores: jogadores, path: path))
 //            EmptyView()
         case .NomeJogadores:
-            return AnyView(NomeJogadores(njogadores: njogadores, path: path))
+            return AnyView(NomeJogadores(jogadores: jogadores, path: path))
         case .Jogo:
-            return AnyView(Jogo(njogadores: njogadores, jogadores: jogadores, path: path))
+            return AnyView(Jogo(jogadores: jogadores, path: path))
                            
         }
     }
